@@ -8,7 +8,7 @@ const MENU_ITEMS = [
     category: 'breakfast',
     catLabel: '🌅 Breakfast',
     desc: 'Soft steamed rice cakes served with sambar and fresh coconut chutney. A timeless South Indian breakfast.',
-    image: './images/food_idly.png'
+    image: '../images/food_idly.png'
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const MENU_ITEMS = [
     category: 'breakfast',
     catLabel: '🌅 Breakfast',
     desc: 'Crispy golden masala dosa with spiced potato filling, served with sambar and chutneys.',
-    image: './images/food_dosa.png'
+    image: '../images/food_dosa.png'
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const MENU_ITEMS = [
     category: 'tiffin',
     catLabel: '🫓 Tiffin',
     desc: 'Flaky, layered Kerala-style parotta served with rich vegetable kurma or egg curry.',
-    image: './images/food_parotta.png'
+    image: '../images/food_parotta.png'
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const MENU_ITEMS = [
     category: 'tiffin',
     catLabel: '🫓 Tiffin',
     desc: 'Puffy golden fried bread served with spiced potato masala. A family favourite!',
-    image: './images/food_poori.png'
+    image: '../images/food_poori.png'
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ const MENU_ITEMS = [
     category: 'breakfast',
     catLabel: '🌅 Breakfast',
     desc: 'Creamy ven pongal tempered with ghee, cashews, black pepper, and curry leaves. Pure comfort food.',
-    image: './images/food_pongal.png'
+    image: '../images/food_pongal.png'
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const MENU_ITEMS = [
     category: 'breakfast',
     catLabel: '🌅 Breakfast',
     desc: 'Crispy medu vada — lentil donuts with a crunchy exterior and soft inside, with sambar & chutney.',
-    image: './images/food_vada.png'
+    image: '../images/food_vada.png'
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ const MENU_ITEMS = [
     category: 'tiffin',
     catLabel: '🫓 Tiffin',
     desc: 'Soft whole wheat chapati served with flavourful vegetable curry. Light and nutritious.',
-    image: './images/food_chappathi.png'
+    image: '../images/food_chappathi.png'
   },
   {
     id: 8,
@@ -71,7 +71,7 @@ const MENU_ITEMS = [
     category: 'meals',
     catLabel: '🍛 Meals',
     desc: 'Grand South Indian feast on a banana leaf — rice, sambar, rasam, curries, papad, pickle & payasam.',
-    image: './images/food_meals.png'
+    image: '../images/food_meals.png'
   }
 ];
 
