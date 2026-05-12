@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu – Sri Saravana Hotel</title>
+  <meta name="description" content="Browse the full menu of Sri Saravana Hotel. Authentic South Indian dishes including Idly, Dosa, Parotta, Pongal, Full Meals and more at the best prices." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-logo" style="color:var(--brown-dark)">
+      <span class="logo-icon">🍛</span> Sri Saravana Hotel
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#specials">Specials</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li>
+        <a href="cart.html" class="nav-cart-btn" id="cartNavBtn">
+          🛒 Cart <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+      </li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Our Menu</h1>
+    <p>Fresh, authentic South Indian food crafted with love every day</p>
+  </div>
+
+  <!-- MENU SECTION -->
+  <section class="menu-section">
+    <div class="container">
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-btn active" data-cat="all">🍽️ All Items</button>
+        <button class="filter-btn" data-cat="breakfast">🌅 Breakfast</button>
+        <button class="filter-btn" data-cat="tiffin">🫓 Tiffin</button>
+        <button class="filter-btn" data-cat="meals">🍛 Meals</button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- Cards injected by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Floating Cart Bar -->
+  <div class="floating-cart" id="floatingCart" style="display:none">
+    <div class="floating-cart-info">
+      <span id="fcItemCount">0 items</span>
+      <span id="fcTotal">₹0</span>
+    </div>
+    <a href="cart.html" class="btn btn-primary">
+      View Cart & Order →
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid" style="max-width:1200px; margin:0 auto">
+      <div class="footer-brand">
+        <div class="brand-name">🍛 Sri Saravana Hotel</div>
+        <p>Serving authentic South Indian cuisine for over a decade.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📞 +91 98765 43210</p>
+        <p>⏰ 6:00 AM – 10:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom" style="max-width:1200px; margin:0 auto">
+      <p>© 2024 Sri Saravana Hotel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

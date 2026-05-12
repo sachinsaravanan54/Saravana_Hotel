@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Placed – Sri Saravana Hotel</title>
+  <meta name="description" content="Your order has been placed at Sri Saravana Hotel. Thank you!" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/thankyou.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-logo" style="color:var(--brown-dark)">
+      <span class="logo-icon">🍛</span> Sri Saravana Hotel
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- THANK YOU SECTION -->
+  <section class="ty-section">
+    <div class="ty-card">
+
+      <!-- Animated Check -->
+      <div class="check-circle">
+        <svg class="check-svg" viewBox="0 0 52 52">
+          <circle class="check-circle-anim" cx="26" cy="26" r="25" fill="none"/>
+          <path class="check-mark" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+      </div>
+
+      <div class="ty-content">
+        <h1>Order Placed Successfully! 🎉</h1>
+        <p class="ty-main-msg">
+          Your order has been noted successfully.<br/>
+          Kindly wait for a few minutes.<br/>
+          <strong>Thank you for ordering with us!</strong>
+        </p>
+
+        <!-- Order Summary -->
+        <div class="order-recap" id="orderRecap">
+          <!-- Filled by JS -->
+        </div>
+
+        <!-- Wait Timer -->
+        <div class="wait-badge">
+          <span class="wait-icon">⏱️</span>
+          <div>
+            <strong>Estimated Preparation Time</strong>
+            <div class="wait-time">10 – 15 Minutes</div>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span>Order Received</span>
+            <span>Preparing</span>
+            <span>Ready!</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-status" id="progressStatus">Your order is being prepared...</div>
+        </div>
+
+        <div class="ty-actions">
+          <a href="index.html" class="btn btn-primary btn-lg">🏠 Back to Home</a>
+          <a href="menu.html" class="btn btn-outline btn-lg">🍽️ Order More</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Floating food emojis -->
+    <div class="food-confetti" id="foodConfetti"></div>
+  </section>
+
+  <script src="js/common.js"></script>
+  <script src="js/thankyou.js"></script>
+</body>
+</html>

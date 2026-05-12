@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard – Sri Saravana Hotel</title>
+  <meta name="description" content="Admin dashboard for Sri Saravana Hotel order management." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+  <!-- LOGIN OVERLAY -->
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-card">
+      <div class="login-icon">🔐</div>
+      <h1>Admin Login</h1>
+      <p>Sri Saravana Hotel – Staff Only</p>
+      <div class="form-group" style="margin-top:24px">
+        <label for="adminPass">Admin Password</label>
+        <input type="password" id="adminPass" placeholder="Enter password" onkeydown="if(event.key==='Enter') adminLogin()" />
+      </div>
+      <button class="btn btn-primary" style="width:100%; justify-content:center; margin-top:8px" onclick="adminLogin()">
+        Login →
+      </button>
+      <div class="login-error" id="loginError"></div>
+    </div>
+  </div>
+
+  <!-- ADMIN DASHBOARD -->
+  <div class="admin-wrapper" id="adminWrapper" style="display:none">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-brand">
+        <span>🍛</span>
+        <div>
+          <div class="brand-name">Sri Saravana</div>
+          <div class="brand-sub">Admin Panel</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="sidebar-btn active" id="btnLive" onclick="showTab('live')">
+          <span>📋</span> Live Orders
+          <span class="order-count-badge" id="liveCount">0</span>
+        </button>
+        <button class="sidebar-btn" id="btnHistory" onclick="showTab('history')">
+          <span>📁</span> Order History
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="btn btn-outline btn-sm" onclick="adminLogout()">Logout</button>
+        <div class="last-refresh">Auto-refresh: <span id="refreshTimer">10s</span></div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="admin-main">
+
+      <!-- Top Bar -->
+      <div class="admin-topbar">
+        <div>
+          <h2 id="tabTitle">Live Orders</h2>
+          <p id="tabSub">Orders refresh automatically every 10 seconds</p>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn btn-outline btn-sm" onclick="loadOrders()">🔄 Refresh</button>
+          <div class="live-dot-wrap">
+            <div class="live-dot"></div>
+            <span>Live</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="stats-row" id="statsRow">
+        <div class="stat-card">
+          <div class="stat-icon">📋</div>
+          <div>
+            <div class="stat-value" id="statPending">0</div>
+            <div class="stat-label">Pending</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🍳</div>
+          <div>
+            <div class="stat-value" id="statPreparing">0</div>
+            <div class="stat-label">Preparing</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✅</div>
+          <div>
+            <div class="stat-value" id="statCompleted">0</div>
+            <div class="stat-label">Completed</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💰</div>
+          <div>
+            <div class="stat-value" id="statRevenue">₹0</div>
+            <div class="stat-label">Today's Revenue</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Orders Table -->
+      <div class="orders-container">
+        <div id="loadingOrders" class="loading-orders">
+          <div class="spinner"></div>
+          <p>Loading orders...</p>
+        </div>
+        <div id="ordersEmpty" class="empty-state" style="display:none">
+          <div class="empty-icon">📋</div>
+          <h3>No orders yet</h3>
+          <p>Orders will appear here in real-time</p>
+        </div>
+        <div id="ordersTableWrap" style="display:none">
+          <table class="orders-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="ordersTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

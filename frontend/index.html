@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sri Saravana Hotel – Authentic South Indian Cuisine</title>
+  <meta name="description" content="Sri Saravana Hotel offers the finest authentic South Indian cuisine. From crispy dosas to full meals, taste the tradition in every bite. Order online now." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-icon">🍛</span> Sri Saravana Hotel
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#specials">Specials</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="menu.html" class="nav-cart-btn" id="cartNavBtn">🛒 Cart <span class="cart-badge" id="cartBadge" style="display:none">0</span></a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="home">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge fade-up">🌿 Authentic South Indian Flavours</div>
+      <h1 class="hero-title fade-up">
+        Sri Saravana<br/><em>Hotel</em>
+      </h1>
+      <p class="hero-subtitle fade-up">
+        Where tradition meets taste. Every dish crafted with love,<br/>
+        served with the warmth of South India.
+      </p>
+      <div class="hero-actions fade-up">
+        <a href="menu.html" class="btn btn-primary btn-lg">
+          🍽️ View Menu
+        </a>
+        <a href="#about" class="btn btn-secondary btn-lg">
+          Our Story
+        </a>
+      </div>
+      <div class="hero-stats fade-up">
+        <div class="stat-item">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Menu Items</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Happy Customers</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Years of Trust</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">
+      <div class="scroll-icon"></div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT ====== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images fade-up">
+          <div class="about-img-main">
+            <img src="images/food_meals.png" alt="Sri Saravana Hotel Full Meals" />
+          </div>
+          <div class="about-img-float">
+            <img src="images/food_dosa.png" alt="Crispy Dosa" />
+          </div>
+          <div class="about-badge-float">
+            <span class="badge-num">10+</span>
+            <span class="badge-text">Years of Excellence</span>
+          </div>
+        </div>
+        <div class="about-content fade-up">
+          <div class="title-underline">
+            <span>✦</span>
+          </div>
+          <h2 class="section-title" style="text-align:left">Our Story & Heritage</h2>
+          <p class="about-desc">
+            Founded over a decade ago, Sri Saravana Hotel has been the heartbeat of authentic South Indian cuisine in our community. We started with a simple dream — to bring the true flavours of Tamil Nadu to every table.
+          </p>
+          <p class="about-desc">
+            From the golden crispiness of our Dosas to the comforting warmth of our Full Meals served on a banana leaf, every dish is a celebration of tradition, prepared fresh daily using time-honoured recipes passed down through generations.
+          </p>
+          <div class="about-features">
+            <div class="feature-item">
+              <span class="feature-icon">🌿</span>
+              <div>
+                <strong>Fresh Ingredients</strong>
+                <p>Sourced daily from local markets</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">👨‍🍳</span>
+              <div>
+                <strong>Expert Chefs</strong>
+                <p>Masters of South Indian culinary arts</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">❤️</span>
+              <div>
+                <strong>Made with Love</strong>
+                <p>Every dish crafted with care</p>
+              </div>
+            </div>
+          </div>
+          <a href="menu.html" class="btn btn-primary" style="margin-top:24px">
+            Explore Our Menu →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SPECIALS ====== -->
+  <section class="specials-section" id="specials">
+    <div class="container">
+      <div class="title-underline">
+        <span>✦</span>
+      </div>
+      <h2 class="section-title">Our Special Dishes</h2>
+      <p class="section-subtitle">Handpicked favourites loved by our customers every single day</p>
+
+      <div class="specials-grid">
+        <div class="special-card featured fade-up">
+          <div class="special-img-wrap">
+            <img src="images/food_meals.png" alt="Full South Indian Meals" />
+            <div class="special-tag">🏆 Chef's Pick</div>
+          </div>
+          <div class="special-content">
+            <h3>Full Meals</h3>
+            <p>The grand traditional South Indian meal on a banana leaf — rice, sambar, rasam, vegetables, payasam, and more. A complete feast.</p>
+            <div class="special-footer">
+              <span class="food-price">₹120</span>
+              <a href="menu.html" class="btn btn-primary btn-sm">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-card fade-up">
+          <div class="special-img-wrap">
+            <img src="images/food_dosa.png" alt="Crispy Masala Dosa" />
+            <div class="special-tag">⭐ Popular</div>
+          </div>
+          <div class="special-content">
+            <h3>Masala Dosa</h3>
+            <p>Paper-thin crispy dosa with spiced potato filling, served with sambar & fresh chutneys.</p>
+            <div class="special-footer">
+              <span class="food-price">₹50</span>
+              <a href="menu.html" class="btn btn-primary btn-sm">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-card fade-up">
+          <div class="special-img-wrap">
+            <img src="images/food_pongal.png" alt="Pongal" />
+            <div class="special-tag">🌅 Breakfast</div>
+          </div>
+          <div class="special-content">
+            <h3>Ven Pongal</h3>
+            <p>Creamy rice-lentil porridge tempered with ghee, cashews, black pepper and curry leaves. The perfect morning comfort food.</p>
+            <div class="special-footer">
+              <span class="food-price">₹60</span>
+              <a href="menu.html" class="btn btn-primary btn-sm">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== REVIEWS ====== -->
+  <section class="reviews-section" id="reviews">
+    <div class="reviews-bg"></div>
+    <div class="container" style="position:relative">
+      <div class="title-underline">
+        <span>✦</span>
+      </div>
+      <h2 class="section-title" style="color:var(--white)">What Our Customers Say</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.7)">Real reviews from our beloved regulars</p>
+
+      <div class="reviews-grid">
+        <div class="review-card fade-up">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"The best dosa I've ever had! Crispy on the outside, perfectly spiced inside. The sambar is just like home. Will visit every week!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">R</div>
+            <div>
+              <strong>Ramesh Kumar</strong>
+              <span>Regular Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card fade-up">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Full Meals here are incredible value. Everything is fresh, hot, and truly authentic. The banana leaf experience takes you straight to Tamil Nadu!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">P</div>
+            <div>
+              <strong>Priya Devi</strong>
+              <span>Food Blogger</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card fade-up">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Parotta with kurma is simply divine here. The service is warm and the ambience is comfortable. My family's favourite restaurant for years!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">M</div>
+            <div>
+              <strong>Murugan S.</strong>
+              <span>Loyal Customer – 5 years</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card fade-up">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Pongal and vada combo in the morning is the best way to start your day. Fresh, flavourful, and reasonably priced. Highly recommended!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">A</div>
+            <div>
+              <strong>Anitha R.</strong>
+              <span>Office Regular</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="title-underline">
+        <span>✦</span>
+      </div>
+      <h2 class="section-title">Find Us & Contact</h2>
+      <p class="section-subtitle">We're always happy to hear from you</p>
+
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Our Location</h4>
+              <p>123, Main Road, Anna Nagar<br/>Tamil Nadu, India – 600040</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">⏰</div>
+            <div>
+              <h4>Opening Hours</h4>
+              <p>Monday – Sunday<br/>6:00 AM – 10:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Phone & WhatsApp</h4>
+              <p>+91 98765 43210<br/>+91 98765 43211</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4>Email Us</h4>
+              <p>orders@srisaravanahotel.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-cta fade-up">
+          <div class="cta-card">
+            <div class="cta-icon">🍽️</div>
+            <h3>Ready to Order?</h3>
+            <p>Browse our full menu and place your order online. We'll have it ready fresh for you!</p>
+            <a href="menu.html" class="btn btn-primary btn-lg" style="margin-top:8px; width:100%; justify-content:center;">
+              View Full Menu & Order
+            </a>
+            <div class="cta-divider">— or —</div>
+            <p style="font-size:0.9rem; color:var(--text-mid); text-align:center">Call us directly to place an order</p>
+            <a href="tel:+919876543210" class="btn btn-outline btn-lg" style="width:100%; justify-content:center; margin-top:8px;">
+              📞 Call Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid" style="max-width:1200px; margin:0 auto">
+      <div class="footer-brand">
+        <div class="brand-name">🍛 Sri Saravana Hotel</div>
+        <p>Serving authentic South Indian cuisine with love and tradition for over a decade. Every meal is a journey to the heart of Tamil Nadu.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">📷</a>
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">📱</a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p>📍 123, Main Road, Anna Nagar, Tamil Nadu</p>
+        <p>📞 +91 98765 43210</p>
+        <p>⏰ 6:00 AM – 10:00 PM Daily</p>
+        <p>✉️ orders@srisaravanahotel.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom" style="max-width:1200px; margin:0 auto">
+      <p>© 2024 Sri Saravana Hotel. All rights reserved. Made with ❤️ for South Indian food lovers.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

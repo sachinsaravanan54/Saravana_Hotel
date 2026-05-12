@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart – Sri Saravana Hotel</title>
+  <meta name="description" content="Review your cart and place your order at Sri Saravana Hotel. Fresh, authentic South Indian food delivered fast." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-logo" style="color:var(--brown-dark)">
+      <span class="logo-icon">🍛</span> Sri Saravana Hotel
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="cart.html" class="nav-cart-btn" id="cartNavBtn">
+        🛒 Cart <span class="cart-badge" id="cartBadge">0</span>
+      </a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Your Cart</h1>
+    <p>Review your items and place your order</p>
+  </div>
+
+  <!-- CART SECTION -->
+  <section class="cart-section">
+    <div class="container">
+      <div class="cart-layout" id="cartLayout">
+
+        <!-- Cart Items -->
+        <div class="cart-items-panel">
+          <div class="panel-header">
+            <h2>Order Items</h2>
+            <button class="btn btn-outline btn-sm" id="clearCartBtn" onclick="clearCart()">Clear All</button>
+          </div>
+          <div id="cartItemsList">
+            <!-- Cart items rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary-panel">
+          <h2>Order Summary</h2>
+
+          <!-- Customer Info -->
+          <div class="customer-form">
+            <div class="form-group">
+              <label for="customerName">Your Name <span class="optional">(optional)</span></label>
+              <input type="text" id="customerName" placeholder="e.g. Ramesh Kumar" />
+            </div>
+            <div class="form-group">
+              <label for="tableNumber">Table Number <span class="optional">(optional)</span></label>
+              <input type="text" id="tableNumber" placeholder="e.g. Table 3" />
+            </div>
+            <div class="form-group">
+              <label for="mobileNumber">Mobile Number <span class="optional">(for order updates)</span></label>
+              <input type="tel" id="mobileNumber" placeholder="e.g. 9876543210" />
+            </div>
+          </div>
+
+          <!-- Totals -->
+          <div class="summary-totals" id="summaryTotals">
+            <div class="total-row">
+              <span>Subtotal</span>
+              <span id="subtotalAmt">₹0</span>
+            </div>
+            <div class="total-row">
+              <span>Taxes & Charges</span>
+              <span>₹0</span>
+            </div>
+            <div class="total-row grand">
+              <span>Total Amount</span>
+              <span id="grandTotal">₹0</span>
+            </div>
+          </div>
+
+          <!-- Place Order Button -->
+          <button class="btn btn-primary btn-lg place-order-btn" id="placeOrderBtn" onclick="placeOrder()">
+            🍽️ Place Order
+          </button>
+
+          <a href="menu.html" class="back-to-menu">← Continue Ordering</a>
+
+          <div class="order-note">
+            <span>⏱️</span>
+            <p>Your order will be prepared fresh. Estimated time: <strong>10–15 minutes</strong></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Empty Cart -->
+      <div class="empty-state" id="emptyCart" style="display:none">
+        <div class="empty-icon">🛒</div>
+        <h3>Your cart is empty</h3>
+        <p>Looks like you haven't added anything yet. Browse our menu!</p>
+        <a href="menu.html" class="btn btn-primary" style="margin-top:24px">Browse Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid" style="max-width:1200px; margin:0 auto">
+      <div class="footer-brand">
+        <div class="brand-name">🍛 Sri Saravana Hotel</div>
+        <p>Serving authentic South Indian cuisine for over a decade.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📞 +91 98765 43210</p>
+        <p>⏰ 6:00 AM – 10:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom" style="max-width:1200px; margin:0 auto">
+      <p>© 2024 Sri Saravana Hotel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
