@@ -9,7 +9,7 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, '../')));
 
 // Routes
 const ordersRouter = require('./routes/orders');
@@ -18,11 +18,11 @@ app.use('/api/orders', ordersRouter);
 app.use('/api/admin', adminRouter);
 
 // Serve frontend pages
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../frontend/index.html')));
-app.get('/menu', (req, res) => res.sendFile(path.join(__dirname, '../frontend/menu.html')));
-app.get('/cart', (req, res) => res.sendFile(path.join(__dirname, '../frontend/cart.html')));
-app.get('/thankyou', (req, res) => res.sendFile(path.join(__dirname, '../frontend/thankyou.html')));
-app.get('/admin', (req, res) => res.sendFile(path.join(__dirname, '../frontend/admin.html')));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
+app.get('/menu', (req, res) => res.sendFile(path.join(__dirname, '../menu.html')));
+app.get('/cart', (req, res) => res.sendFile(path.join(__dirname, '../cart.html')));
+app.get('/thankyou', (req, res) => res.sendFile(path.join(__dirname, '../thankyou.html')));
+app.get('/admin', (req, res) => res.sendFile(path.join(__dirname, '../admin.html')));
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI)
