@@ -71,7 +71,7 @@ const MENU_ITEMS = [
     category: 'meals',
     catLabel: '🍛 Meals',
     desc: 'Grand South Indian feast on a banana leaf — rice, sambar, rasam, curries, papad, pickle & payasam.',
-    image: '../images/food_meals.png'
+    image: '../../images/food_meals.png'
   }
 ];
 

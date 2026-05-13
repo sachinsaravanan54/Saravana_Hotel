@@ -1,14 +1,14 @@
 /* ====== cart.js — Cart & Order page ====== */
 
 const FOOD_IMAGES = {
-  'Idly': 'images/food_idly.png',
-  'Dosa': 'images/food_dosa.png',
-  'Parotta': 'images/food_parotta.png',
-  'Poori': 'images/food_poori.png',
-  'Pongal': 'images/food_pongal.png',
-  'Vada': 'images/food_vada.png',
-  'Chappathi': 'images/food_chappathi.png',
-  'Full Meals': 'images/food_meals.png'
+  'Idly': '../images/food_idly.png',
+  'Dosa': '../images/food_dosa.png',
+  'Parotta': '../images/food_parotta.png',
+  'Poori': '../images/food_poori.png',
+  'Pongal': '../images/food_pongal.png',
+  'Vada': '../images/food_vada.png',
+  'Chappathi': '../images/food_chappathi.png',
+  'Full Meals': '../images/food_meals.png'
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,7 +35,7 @@ function renderCart() {
     cartItemsList.innerHTML = cart.map(item => `
       <div class="cart-item" id="cart-row-${item.name.replace(/\s/g,'_')}">
         <img class="cart-item-img"
-          src="${FOOD_IMAGES[item.name] || 'images/food_idly.png'}"
+          src="${FOOD_IMAGES[item.name] || '../images/food_idly.png'}"
           alt="${item.name}" />
         <div class="cart-item-info">
           <div class="cart-item-name">${item.name}</div>
